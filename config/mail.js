@@ -6,5 +6,5 @@ export const transporter = createTransport({
     tls: {
     ciphers:'SSLv3'
     },
-    auth: { user: 'azaelweb1@hotmail.com', pass: 'azael2291266364' }
+    auth: { user: 'imdpazgf@hotmail.com', pass: '11012002Dp' }
 })

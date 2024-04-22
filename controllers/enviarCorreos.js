@@ -8,7 +8,7 @@ export const enviarCorreo = async (req, res) => {
         const { carritoFormato, direccionEntrega } = req.body
         const mailOptions = {
             from: 'azaelweb1@hotmail.com',
-            to: ['azaelweb1@hotmail.com', 'azaelweb1@gmail.com'],
+            to: ['azaelweb1@hotmail.com', `${direccionEntrega?.correo}`],
             subject: 'Contacto desde la página web',
             html: generarHtmlCorreo(carritoFormato, direccionEntrega),
         }

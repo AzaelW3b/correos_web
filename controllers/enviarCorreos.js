@@ -7,8 +7,8 @@ export const enviarCorreo = async (req, res) => {
         console.log(req.body)
         const { carritoFormato, direccionEntrega } = req.body
         const mailOptions = {
-            from: 'azaelweb1@hotmail.com',
-            to: ['azaelweb1@hotmail.com', `${direccionEntrega?.correo}`],
+            from: 'imdpazgf@hotmail.com',
+            to: [`${direccionEntrega?.correo}`],
             subject: 'Contacto desde la página web',
             html: generarHtmlCorreo(carritoFormato, direccionEntrega),
         }
@@ -29,9 +29,8 @@ export const enviarCorreoContacto = async (req, res) => {
     try {
         console.log(req.body)
         const mailOptions = {
-            from: 'azaelweb1@hotmail.com',
-            // to: ['azael.garcia@gruver.mx, maria.cuellar@gruver.mx, maria.cuellar@gkontrol.mx'],
-            to: ['azaelweb1@hotmail.com', 'azaelweb1@gmail.com'],
+            from: 'imdpazgf@hotmail.com',
+            to: [`${req?.body?.correo}`],
             subject: 'Contacto desde la página web',
             html: generarHtmlCorreoContacto(req.body),
         }
